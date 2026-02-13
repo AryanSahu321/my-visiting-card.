@@ -1,0 +1,80 @@
+html
+{
+	background: #f2f4f7;
+}
+body {
+      font-family: comic sans ms;
+      background: #f2f4e0;
+	  /*body become flex container which allow justify and align 
+	  propertries once you comment out display line centring 
+	  propertries ignored by browser*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+	  /*100vh mean height of body container is 100% when it 
+	  50% body con halfed and due to css propagtion rule body
+	  bgcoler cover entire screen if no bgcoler given in html 
+	  tag, card overflow from body as it has grater size*/
+      height: 100vh;
+	  /*margin is space outside the element border
+	  padding is space b/w iner content and border*/
+      margin: 0;
+    }
+	.card {
+      width: 300px;
+      background: #f2f4f6;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 10px rgba(200, 100, 10, 0.5);
+      text-align: center;
+	  /*it tells animation speed and way when on hower
+	  box shadowb do same*/
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+	.card:hover {
+      transform: translateY(-5px); 
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+	.card img {
+      width: 100%; /*actual size of image*/
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    .card h2 {
+      font-size: 20px;
+      margin: 10px 0;/*top-bottem 10px & left right 0 
+	   also trbl work*/
+      color: #000; 
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+	  /*height of line is 1.5 times font size 14*1.5= 21px 
+	  this extra 7px divided at top and bottem of text*/
+      line-height: 1.5;
+    }
+
+    .btn {
+      margin-top: 15px;
+	  /*<a> tag is inline element it takes width as the text inside 
+	  you cant add height,width,margin to  it, but <div> & <h2>
+	  are Bloak element start with new line and full width of 
+	  container ur button will to big, Using display:inline-block 
+	  with other content it take required width only 
+	  block allow to add padding,margin,height,width*/
+      display: inline-block;
+      padding: 10px 18px;
+	  font-family: gigi;
+      background: #0066ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 18px;
+      transition: background 0.2s ease;
+    }
+
+    .btn:hover {
+      background: #004ecc;
+    }
